@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Digital Birthday Card - Opened View</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&amp;family=Noto+Sans:wght@400;700&amp;family=Caveat:wght@400..700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f4257b",
+                        "background-light": "#f8f5f7",
+                        "background-dark": "#221017",
+                        "paper-light": "#fff0f5",
+                        "paper-dark": "#3d1d2b",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "handwriting": ["Caveat", "cursive"],
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'float-delayed': 'float 6s ease-in-out 3s infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(244, 37, 123, 0.2);
+            border-radius: 20px;
+        }
+        
+        /* Fold effect gradient */
+        .card-spine {
+            background: linear-gradient(to right, rgba(0,0,0,0.02), rgba(0,0,0,0.05), rgba(0,0,0,0.02));
+        }
+        .dark .card-spine {
+            background: linear-gradient(to right, rgba(255,255,255,0.02), rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display selection:bg-primary/30 selection:text-primary">
+<!-- Navigation -->
+<header class="w-full border-b border-white/50 dark:border-white/5 px-6 py-4 flex items-center justify-between backdrop-blur-sm sticky top-0 z-50">
+<div class="flex items-center gap-3">
+<div class="size-8 text-primary bg-primary/10 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">cake</span>
+</div>
+<h2 class="text-[#181114] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">BirthdayGreetings</h2>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:flex text-[#181114] dark:text-white/80 font-semibold text-sm hover:text-primary transition-colors">How it works</button>
+<button class="flex items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+<span class="truncate">Create Card</span>
+</button>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-grow flex items-center justify-center p-4 md:p-8 lg:p-12 overflow-hidden relative">
+<!-- Background Decorations -->
+<div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+<div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/5 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-purple-500/10 rounded-full blur-[100px]"></div>
+</div>
+<!-- The Opened Card -->
+<div class="relative w-full max-w-[1100px] bg-white dark:bg-[#2A151D] rounded-3xl shadow-2xl shadow-black/10 dark:shadow-black/50 flex flex-col md:flex-row overflow-hidden min-h-[600px] transition-all duration-500 transform hover:scale-[1.005]">
+<!-- Left Panel: The Announcement -->
+<div class="flex-1 p-8 md:p-12 lg:p-16 flex flex-col justify-center relative bg-white dark:bg-[#2A151D] border-b md:border-b-0 md:border-r border-[#f5f0f2] dark:border-white/5">
+<!-- Decorative Top Icon -->
+<div class="mb-8">
+<div class="inline-flex items-center justify-center p-3 rounded-full bg-primary/5 text-primary mb-4 animate-bounce">
+<span class="material-symbols-outlined text-[32px]">celebration</span>
+</div>
+</div>
+<div class="space-y-6 z-10">
+<span class="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-wider uppercase mb-2">Since 1996</span>
+<h1 class="text-[#181114] dark:text-white tracking-tight text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1]">
+                        Happy <span class="text-primary inline-block transform hover:-rotate-2 transition-transform cursor-default">28th</span><br/> Birthday, Sarah!
+                    </h1>
+<div class="w-16 h-1.5 bg-gradient-to-r from-primary to-purple-400 rounded-full"></div>
+<p class="text-[#181114]/70 dark:text-white/70 text-lg font-normal leading-relaxed max-w-md">
+                        Here’s to another year of amazing adventures, laughter, and joy. You make the world brighter just by being in it.
+                    </p>
+</div>
+<!-- Subtle Pattern Background Left -->
+<div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white via-white/80 to-transparent dark:from-[#2A151D] dark:via-[#2A151D]/80 pointer-events-none z-10"></div>
+<div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none" style="background-image: radial-gradient(#181114 1px, transparent 1px); background-size: 24px 24px;"></div>
+</div>
+<!-- Central Spine/Fold Effect -->
+<div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-12 -ml-6 z-20 pointer-events-none card-spine"></div>
+<!-- Right Panel: Personal Note -->
+<div class="flex-1 relative bg-paper-light dark:bg-paper-dark p-8 md:p-12 lg:p-16 flex flex-col justify-between overflow-hidden group">
+<!-- Floating Decorative Elements (Confetti/Balloons) -->
+<div class="absolute top-10 right-10 animate-float opacity-80 pointer-events-none">
+<svg fill="none" height="80" viewbox="0 0 60 80" width="60" xmlns="http://www.w3.org/2000/svg">
+<path d="M30 60C46.5685 60 60 46.5685 60 30C60 13.4315 46.5685 0 30 0C13.4315 0 0 13.4315 0 30C0 46.5685 13.4315 60 30 60Z" fill="url(#paint0_linear_balloon)" fill-opacity="0.9"></path>
+<path d="M30 60L28 75" stroke="#181114" stroke-opacity="0.2" stroke-width="2"></path>
+<circle cx="20" cy="18" fill="white" fill-opacity="0.4" r="6"></circle>
+<defs>
+<lineargradient gradientunits="userSpaceOnUse" id="paint0_linear_balloon" x1="30" x2="30" y1="0" y2="60">
+<stop stop-color="#F4257B"></stop>
+<stop offset="1" stop-color="#FF7582"></stop>
+</lineargradient>
+</defs>
+</svg>
+</div>
+<div class="absolute top-24 left-10 animate-float-delayed opacity-60 pointer-events-none">
+<svg fill="none" height="50" viewbox="0 0 60 80" width="40" xmlns="http://www.w3.org/2000/svg">
+<path d="M30 60C46.5685 60 60 46.5685 60 30C60 13.4315 46.5685 0 30 0C13.4315 0 0 13.4315 0 30C0 46.5685 13.4315 60 30 60Z" fill="#9F7AEA" fill-opacity="0.9"></path>
+<path d="M30 60L32 72" stroke="#181114" stroke-opacity="0.2" stroke-width="2"></path>
+<circle cx="18" cy="15" fill="white" fill-opacity="0.4" r="5"></circle>
+</svg>
+</div>
+<!-- Confetti Pieces -->
+<div class="absolute top-[15%] left-[60%] size-3 bg-yellow-400 rounded-full opacity-80 animate-bounce" style="animation-duration: 3s;"></div>
+<div class="absolute top-[40%] right-[10%] size-4 bg-primary rounded-sm rotate-45 opacity-60" style="animation-duration: 4s;"></div>
+<div class="absolute bottom-[30%] left-[10%] w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-b-[16px] border-b-blue-400 rotate-12 opacity-60"></div>
+<!-- Personal Content -->
+<div class="relative z-10 flex-1 flex flex-col justify-center">
+<div class="bg-white/60 dark:bg-black/10 backdrop-blur-sm p-6 rounded-2xl transform rotate-1 transition-transform group-hover:rotate-0 duration-500 border border-white/40 dark:border-white/5 shadow-sm">
+<p class="font-handwriting text-[#181114] dark:text-white/90 text-3xl md:text-4xl leading-snug">
+                            "Hope you have the best day ever! Can't wait to celebrate with you this weekend. Drink some champagne for me!"
+                        </p>
+<p class="font-handwriting text-[#181114] dark:text-white/90 text-2xl mt-4 text-right pr-4">
+                            xoxo
+                        </p>
+</div>
+<div class="mt-8 flex justify-end px-4">
+<div class="flex flex-col items-end">
+<p class="text-primary font-bold text-sm uppercase tracking-widest mb-1">Sent by</p>
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-gradient-to-br from-yellow-300 to-orange-400 flex items-center justify-center text-white text-xs font-bold shadow-md">J</div>
+<p class="text-[#8a6072] dark:text-pink-200 text-lg font-medium">Jane Doe</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Button Area -->
+<div class="mt-8 pt-6 border-t border-primary/10 dark:border-white/10 flex justify-center">
+<button class="group relative flex items-center justify-center gap-2 px-8 py-3 bg-white dark:bg-white/10 text-primary dark:text-white rounded-full font-bold text-sm shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 ring-1 ring-primary/20">
+<span class="material-symbols-outlined text-[20px] group-hover:animate-spin">autorenew</span>
+<span>Replay Magic</span>
+<!-- Glow effect -->
+<div class="absolute inset-0 rounded-full ring-2 ring-primary/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Simple -->
+<footer class="py-6 text-center text-[#181114]/40 dark:text-white/30 text-xs">
+<p>© 2023 BirthdayGreetings. Spreading joy one pixel at a time.</p>
+</footer>
+</body></html>

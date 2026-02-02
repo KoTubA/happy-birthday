@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Digital Birthday Card</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f4257b",
+              "background-light": "#f8f5f7",
+              "background-dark": "#221017",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"],
+              "body": ["Noto Sans", "sans-serif"],
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+            boxShadow: {
+                'card': '0 20px 40px -10px rgba(244, 37, 123, 0.15), 0 0 20px rgba(0,0,0,0.05)',
+                'glow': '0 0 15px rgba(244, 37, 123, 0.5)',
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#181114] dark:text-white antialiased overflow-x-hidden selection:bg-primary selection:text-white">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- Top Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap px-8 py-5 z-10 w-full max-w-[1200px] mx-auto">
+<div class="flex items-center gap-3 text-[#181114] dark:text-white">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">redeem</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">DigitalCardApp</h2>
+</div>
+<div class="flex items-center justify-end gap-4">
+<div class="hidden sm:flex flex-col items-end justify-center mr-2">
+<span class="text-sm font-bold leading-none">Jane Doe</span>
+<span class="text-xs text-gray-500 dark:text-gray-400">Viewing Card</span>
+</div>
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 border-2 border-white dark:border-gray-800 shadow-sm" data-alt="User profile avatar of a smiling woman" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC_DZxT1YnVSv9CH9U9PIpQ6DpTMs0-OmJYz5NB7LzwO2ZJbsWG2Tk8p1UnbK6ct3ayBAI3AoMJJFT9quKJfuJNqpcP7D6HakvBrVijUR7GQHi-U2E9NJnHSZo-gvZeqxihIdldrvBrn3DjydXWC1H22BLFqLduOWeubfq4FrCk_gmOzf-6s3DM8bl0zS6H5sAFb90slKvf7_gl7bMImvbOCmVTZfwnI1mb43coopV28EVu7COvFQomSJtoARs6-QbZLffzD2r6uAc");'>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="layout-container flex flex-grow flex-col items-center justify-center p-4 sm:p-8 relative">
+<!-- Background Decorative Elements -->
+<div class="absolute inset-0 overflow-hidden pointer-events-none">
+<div class="absolute top-1/4 left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute bottom-1/4 right-10 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl"></div>
+</div>
+<!-- Card Container -->
+<div class="layout-content-container flex flex-col max-w-[480px] w-full items-center perspective-1000 z-0">
+<!-- The Physical Card -->
+<div class="group/card relative w-full aspect-[3.5/5] bg-white dark:bg-gray-900 rounded-xl shadow-card transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl cursor-pointer">
+<!-- Card Front Image/Illustration Layer -->
+<div class="absolute inset-0 rounded-xl overflow-hidden">
+<!-- Abstract illustration background -->
+<div class="w-full h-full bg-cover bg-center opacity-90 transition-transform duration-700 group-hover/card:scale-105" data-alt="Illustration of festive pink and gold balloons with falling confetti on a cream background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBTmkyDnJmEV22e6_N5zruN5htGRGJ-7Zbc51vJHRHyreOS0tHjb_F6vovYPHgFeunvxbhiApZbr53sM4avgLtm5vRvEamWE_1Ke5_-KR6KP3jGRXWyd4th_PYE4snQ3G5wpNz-GSkrxfjOQT9Hfzqt0rt65yXYSB9yTpGX07CT9c8oZa5skPARRm9noeDgIwbtVIoCNFtBT_OgLrIbB3MZ715j7ygH0Ghg8sHkGhn27Y1PzeA9IWBnqVzPsrtSTM89M3m5h2h8Rh0");'>
+</div>
+<!-- Gradient Overlay for better text contrast if needed -->
+<div class="absolute inset-0 bg-gradient-to-b from-white/30 via-transparent to-white/60 dark:from-black/10 dark:via-transparent dark:to-black/60"></div>
+</div>
+<!-- Card Content Layer -->
+<div class="absolute inset-0 flex flex-col items-center justify-center p-8 text-center z-10">
+<!-- Top Text -->
+<div class="animate-fade-in-up">
+<p class="text-primary dark:text-primary-400 text-xl sm:text-2xl font-bold tracking-wide uppercase mb-2 drop-shadow-sm">It's Your Day</p>
+<h1 class="text-[#181114] dark:text-white text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight mb-6">
+                                Happy Birthday!
+                            </h1>
+</div>
+<!-- Main Number visual -->
+<div class="relative my-4 transform transition-transform duration-500 group-hover/card:scale-110">
+<!-- Decorative blur behind numbers -->
+<div class="absolute inset-0 bg-yellow-400/20 blur-2xl rounded-full"></div>
+<!-- The Number 28 -->
+<span class="relative text-[160px] leading-none font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-amber-300 via-yellow-500 to-amber-600 drop-shadow-sm" style="-webkit-text-stroke: 1px rgba(255,255,255,0.5);">
+                                28
+                            </span>
+<!-- Confetti decorations layered over/around numbers -->
+<div class="absolute -top-4 -right-4 text-purple-400 animate-bounce" style="animation-duration: 3s;">
+<span class="material-symbols-outlined text-4xl filled" style="font-variation-settings: 'FILL' 1;">celebration</span>
+</div>
+<div class="absolute bottom-4 -left-8 text-primary animate-bounce" style="animation-duration: 4s;">
+<span class="material-symbols-outlined text-3xl">star</span>
+</div>
+</div>
+<!-- Bottom Text -->
+<p class="mt-4 text-[#8a6072] dark:text-gray-300 font-medium text-lg max-w-[200px] leading-snug">
+                            Here's to another year of being fabulous.
+                        </p>
+</div>
+</div>
+<!-- Call to Action Button (Floating) -->
+<div class="relative -mt-6 z-20">
+<button class="flex items-center gap-2 h-14 pl-6 pr-8 bg-primary hover:bg-pink-600 text-white rounded-full shadow-lg hover:shadow-glow transition-all duration-300 transform hover:scale-105 group/btn">
+<div class="bg-white/20 rounded-full p-1 flex items-center justify-center group-hover/btn:translate-y-[-2px] transition-transform">
+<span class="material-symbols-outlined text-xl">arrow_upward</span>
+</div>
+<div class="flex flex-col items-start">
+<span class="text-xs font-medium opacity-90 uppercase tracking-wider">Tap to reveal</span>
+<span class="text-base font-bold leading-none">Click to Open</span>
+</div>
+</button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="flex flex-col items-center justify-center gap-2 px-5 py-8 text-center w-full z-10">
+<div class="h-px w-24 bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-700 to-transparent mb-4"></div>
+<p class="text-[#8a6072] dark:text-gray-400 text-sm font-medium">
+                Sent with love via <strong class="text-[#181114] dark:text-gray-200">DigitalCardApp</strong>
+</p>
+<div class="flex gap-4 mt-2">
+<a class="text-gray-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">share</span>
+</a>
+<a class="text-gray-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</a>
+</div>
+</footer>
+</div>
+</body></html>
